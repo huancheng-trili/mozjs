@@ -27,6 +27,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt install llvm musl -y
+          rustup target add riscv64gc-unknown-linux-musl
       - name: Run sccache-cache
         uses: mozilla-actions/sccache-action@v0.0.4
       - name: Build
